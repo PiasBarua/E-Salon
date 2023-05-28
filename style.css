@@ -1,0 +1,269 @@
+:root{
+    --maincolor:rgb(223, 103, 17);
+     --fs-24: 2.4rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+.body{
+    background-image: url(img-section/Home_page_image/Landing\ page\ imgae\ 2\ copy.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+.logo img{
+    width: 250px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,3));
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.Navbar_links a:hover{
+    color: rgb(255, 255, 255);
+}
+.navbar{
+     width: 100%;
+     height: 60%;
+     max-width: 80%;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     justify-content: space-between;
+     margin-top: 20px;
+     
+}
+.navbar_links{
+    display: flex;
+    position: relative;
+    list-style: none;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.navbar_links  li a{
+    display: block;
+    transition: 0.2s;
+    position: relative;
+}
+.navbar_links li a:hover{
+    background-color: rgb(223, 103, 17);
+    padding: 0.5rem 1rem;
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.2s;
+    position: relative;
+}
+.navbar_btn_toggle{
+    color:rgb(223, 103, 17);
+    font-size: 1.5rem;
+    cursor: pointer; 
+    display: none;
+}
+.navbar_log_in_btn{
+    background-color: rgb(223, 103, 17);
+    padding: 0.5rem 1rem;
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+.navbar_log_in_btn:hover{
+    scale:1.05;
+}
+
+.Navbar_text{
+    color:white;
+    font-size: 100px;
+    position: relative;
+    margin-left: 200px;
+    margin-top: 250px;
+    font-weight: bold;
+}
+.wel{
+    color: var(--maincolor);
+    position: absolute;
+    margin-left:200px ;
+    word-spacing: 0.5rem;
+}
+.e-salon{
+    color: white;
+}
+.navbar_description{
+    color: var(--maincolor);
+
+    width: 700px;
+    text-align: justify;
+    margin-left: 200px;
+    font-weight: bold;
+    word-spacing: 0.5rem;
+}
+.navbar_btn_appoinment{
+    background-color: var(--maincolor);
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+    margin-left: 200px;
+    padding: 0.7rem 3rem;
+    border-radius:20px;
+    margin-top: 20px;
+    position: relative;
+    transition: 0.2s;
+}
+.navbar_btn_appoinment:hover{
+    color: black;
+    scale:1.05;
+}  
+
+
+/*service section */ 
+
+.service{
+    position: relative;
+    text-align: center;
+    margin-top: 90px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--maincolor);
+    
+}
+.service_pera{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.service-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    row-gap: 80px;
+    column-gap: 80px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    
+    
+}
+.service_card{
+    width: 400px;
+    background-color: var(--maincolor);
+    height: 300px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 5px 10px 18px rgb(187, 187, 187);
+    transition: 0.2s;
+}
+.service_card:hover{
+    scale: 1.1;
+}
+.service_card img{
+    width: 80px;
+    position: relative;
+    justify-items: center;
+    margin-left: 10rem;
+    margin-top: 1rem;
+    
+    
+
+}
+.service_text{
+    padding: 20px;
+    text-align: center;
+    text-align: justify;
+}
+.service_text h1{
+    text-align: center;
+}
+.service_text p{
+    margin-top: 20px;
+}
+.service_salon_icon{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Price section start*/
+
+.price_section{
+    background-image: url(img-section/pricing-bg\ copy.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+ 
+    
+}
+
+.price_title_description{
+    position: relative;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    top: 60px;
+    font-size:large;
+}
+.price_section_flex{
+    display: flex;
+}
+.price_section_flex_item img{
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    margin-left: 32px;
+}
+.price_section_flex_item h3{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Navbar Responsive Design*/
