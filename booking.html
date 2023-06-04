@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <!-- This is main Form Area Start ++ -->
+    <div class="bf-container">
+
+        <!-- Main form Body Start -->
+        <div class="bf-body">
+
+            <!-- Form haed -->
+            <div class="bf-head">
+                <h1>Booking Form</h1>
+                <p>|-Lets start To booking Now-|</p>
+            </div>
+            <!-- Form haed -->
+
+            <!-- Form Body Box -->
+            <form class="bf-body-box" action="form.php">
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p>Your Name</p>
+                        <input type="text" name="fname" id="fname" placeholder="Your Name">
+                    </div>
+                    <div class="bf-col-6">
+                        <p>Email Address</p>
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p>Select Date</p>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="bf-col-6">
+                        <p>Select Service</p>
+                        <select name="s-select">
+                            <option>Select Service</option>
+                            <option value="1">Hair Cutting Styele</option>
+                            <option value="2">Hair Washing</option>
+                            <option value="3">Body Treatments</option>
+                            <option value="3">Beauty & Spa</option>
+                            <option value="3">Stylist Shaving</option>
+                            <option value="3">Multi Hair Colors</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-12">
+                        <p>Messages</p>
+                        <textarea name="Messages" id="Messages" cols="10" rows="2"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+                    <div class="bf-col-3">
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </div>
+
+            </form>
+            <!-- Form Body Box -->
+
+
+        </div>
+        <!-- Main form Body End -->
+
+    </div>
+    <!-- This is main Form Area  End -->
+</body>
+
+</html>

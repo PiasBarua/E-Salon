@@ -1,32 +1,62 @@
-/*Filter Intraction */
-const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll("[data-filter]");
+//price section java script code for see price details
+var firstDivs = document.getElementsByClassName("haircut_text");
+var activeIndex = localStorage.getItem("activeIndex");
 
-let lastClickedFilterBtn = filterBtns[0];
 
-const filter = function () {
-  lastClickedFilterBtn.classList.remove("active");
-  this.classList.add("active");
-  lastClickedFilterBtn = this;
-
-  for (let i = 0; i < filterItems.length; i++) {
-    if (this.dataset.filterBtn === filterItems[i].dataset.filter ||
-      this.dataset.filterBtn === "all") {
-
-      filterItems[i].style.display = "block";
-      filterItems[i].classList.add("active");
-
+function showSecondDiv(index) {
+  var secondDivs = document.getElementsByClassName("secondDiv");
+  
+  for (var i = 0; i < secondDivs.length; i++) {
+    if (i === index - 1) {
+      secondDivs[i].style.display = "";
     } else {
-
-      filterItems[i].style.display = "none";
-      filterItems[i].classList.remove("active");
-
+      secondDivs[i].style.display = "none";
     }
   }
+  
+  for (var i = 0; i < firstDivs.length; i++) {
+    if (i === index - 1) {
+      firstDivs[i].classList.add("active");
+    } else {
+      firstDivs[i].classList.remove("active");
+    }
+  }
+  activeIndex = index;
+  localStorage.setItem("activeIndex", activeIndex);
 }
-addEventOnElem(filterBtns, "click", filter);
 
-window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
+for (var i = 0; i < firstDivs.length; i++) {
+  firstDivs[i].addEventListener("click", function() {
+    var index = Array.prototype.indexOf.call(firstDivs, this) + 1;
+    showSecondDiv(index);
+  });
+}
+if (activeIndex) {
+  showSecondDiv(activeIndex);
+}
+
+/* Gallery section */
+var scrollController = document.querySelector(".gallery_image");
+
+var backarrow = document.getElementById("backarrow");
+var nextarrow = document.getElementById("nextarrow");
+
+scrollController.addEventListener("wheel", (evt) => {
+
+  evt.preventDefault();
+  scrollController.scrollLeft += evt.deltaY;
+  scrollController.style.scrollBehavior = "smooth";
+  scrollController.scrollLeft += scrollDistance;
+  scrollController.scrollTop = 0;
+
+});
+
+nextarrow.addEventListener("click", () => {
+  scrollController.style.scrollBehavior = "smooth";
+  scrollController.scrollLeft += 300;
+});
+
+backarrow.addEventListener("click", () => {
+  scrollController.style.scrollBehavior = "smooth";
+  scrollController.scrollLeft -= 1800;
+});
