@@ -131,6 +131,7 @@ a{
     word-spacing: 0.5rem;
 }
 .navbar_btn_appoinment{
+  font-size: ;
     background-color: var(--maincolor);
     border: none;
     outline: none;
@@ -142,6 +143,8 @@ a{
     margin-top: 20px;
     position: relative;
     transition: 0.2s;
+    font-size: 1rem;
+
 }
 .navbar_btn_appoinment:hover{
     color: black;
@@ -564,7 +567,7 @@ footer .content .link-boxes .box{
   border-radius: 4px;
   padding: 0 15px;
   font-size: 15px;
-  color: #fff;
+  color: #000000;
   margin-top: 5px;
 }
 .link-boxes .input-box input::placeholder{
