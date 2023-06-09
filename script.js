@@ -5,7 +5,7 @@ var activeIndex = localStorage.getItem("activeIndex");
 
 function showSecondDiv(index) {
   var secondDivs = document.getElementsByClassName("secondDiv");
-  
+
   for (var i = 0; i < secondDivs.length; i++) {
     if (i === index - 1) {
       secondDivs[i].style.display = "";
@@ -13,7 +13,7 @@ function showSecondDiv(index) {
       secondDivs[i].style.display = "none";
     }
   }
-  
+
   for (var i = 0; i < firstDivs.length; i++) {
     if (i === index - 1) {
       firstDivs[i].classList.add("active");
@@ -26,7 +26,7 @@ function showSecondDiv(index) {
 }
 
 for (var i = 0; i < firstDivs.length; i++) {
-  firstDivs[i].addEventListener("click", function() {
+  firstDivs[i].addEventListener("click", function () {
     var index = Array.prototype.indexOf.call(firstDivs, this) + 1;
     showSecondDiv(index);
   });
@@ -60,3 +60,15 @@ backarrow.addEventListener("click", () => {
   scrollController.style.scrollBehavior = "smooth";
   scrollController.scrollLeft -= 1800;
 });
+
+/* popup-------------------------------------------------------------- 
+var popup = document.getElementById("POPUP");
+
+function openpopup() {
+  popup.classList.add("open_popup")
+}
+
+function closepopup() {
+  popup.classList.remove("open_popup")
+}*/
+

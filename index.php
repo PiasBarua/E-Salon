@@ -1,3 +1,4 @@
+<?php include("connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,47 +16,51 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <title>E Salon</title>
 </head>
 
 <body>
-    <section class="body">
-        <header>
-            <div class="navbar">
-                <div class="logo">
-                    <img src="img-section/logo/E salon Logo.png" alt="">
-                </div>
-                <ul class="navbar_links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Appoinment</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <a href="#" class="navbar_log_in_btn">Log in</a>
-                <div class="navbar_btn_toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+    <header id="home">
+        <nav>
+            <div class="logo">
+                <img src="img-section/logo/E salon Logo.png" alt="Logo">
             </div>
-            <div>
+            <div class="menu">
+                <a href="#home">HOME</a>
+                <a href="#service">SERVICE</a>
+                <a href="#price">PRICES</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#appoinment">BOOKING</a>
+                <a href="#contact">CONTACT US</a>
+
+            </div>
+            <div class="login">
+                <button><a href="">Log In</a></button>
+            </div>
+        </nav>
+        <div class="home">
+            <div class="content">
                 <h5 class="wel">
-                    WELCOME TO <span class="e-salon">E-SALON</span>
+                    WELCOME TO <span style=" color: white;">E-SALON</span>
                 </h5>
-                <p class="Navbar_text">
-                    BARBERS & <br> HAIR CUTTING
+                <p class="nav_heading_text">
+                    BARBERS <span style="color: var(--maincolor);">&</span> <br> HAIR CUTTING
                 </p>
                 <p class="navbar_description">Discover the epitome of grooming mastery at our prestigious Barber Shop.
                     Immerse yourself in unparalleled
                     artistry and
                     refinement, elevating your style to new heights. Experience excellence like never before.</p>
+
+                <button class="navbar_btn_appoinment"> <a href="#appoinment">Book Now</a></button>
             </div>
-            <button class="navbar_btn_appoinment">Book Now</button>
-        </header>
-    </section>
+        </div>
+    </header>
 
     <!--Service section------------------------------------------------------>
 
-    <section class="service_body">
+    <section class="service_body" id="service">
         <p class="service_title">SERVICE WE PROVIDE</p>
         <p class="service_pera">Our services go beyond mere haircuts. Immerse yourself in a world of pampering and
             refinement, where personalized attention and exceptional quality are paramount. <br> From rejuvenating
@@ -126,7 +131,7 @@
 
     <!--Price Section --------------------------------------------->
 
-    <section>
+    <section id="price">
         <div class="price_section">
             <div class="price_title_description">
                 <h1>AWESOME PRICING PLAN</h1>
@@ -277,7 +282,7 @@
     </section>
 
     <!--Gallery Section--------------------------------------------------------------->
-    <section>
+    <section id="gallery">
         <div class="gallery">
             <div class="gallery_title">
                 <h1>LATEST PHOTO GALLERY</h1>
@@ -316,7 +321,7 @@
 
     <!--Appoinemnt Section------------------------------------------------------------->
 
-    <section>
+    <section id="appoinment">
         <div class="bf-container">
             <div class="bf_side_img">
                 <img src="img-section/Booking_side_img/Booking side img.jpg" alt="">
@@ -329,17 +334,18 @@
                     <p>PLEASE FILL UP THIS FORM FOR BOOKING</p>
                 </div>
 
-                <form class="bf-body-box" action="form.php" method="post">
+
+                <form class="bf-body-box" method="post">
 
                     <div class="bf-row">
 
                         <div class="bf-col-6">
                             <p>Fast Name</p>
-                            <input type="text" name="fname" id="fname" placeholder="Fast Name">
+                            <input type="text" name="fname" id="fname" placeholder="Fast Name" required>
                         </div>
                         <div class="bf-col-6">
                             <p>Last Name</p>
-                            <input type="text" name="lname" id="lname" placeholder="Last Name">
+                            <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                         </div>
 
                     </div>
@@ -350,7 +356,7 @@
                         </div>
                         <div class="bf-col-6">
                             <p>Mobile Number</p>
-                            <input type="email" name="email" id="email" placeholder="Mobile Number">
+                            <input type="number" name="number" id="number" placeholder="Mobile Number">
                         </div>
                     </div>
 
@@ -362,14 +368,14 @@
                         </div>
                         <div class="bf-col-6">
                             <p>Services</p>
-                            <select name="s-select">
+                            <select name="select" type="text" required>
                                 <option>Select Service</option>
-                                <option value="1">Hair Cutting Styele</option>
-                                <option value="2">Hair Washing</option>
-                                <option value="3">Body Treatments</option>
-                                <option value="3">Beauty & Spa</option>
-                                <option value="3">Stylist Shaving</option>
-                                <option value="3">Multi Hair Colors</option>
+                                <option value="Hair Cutting Styele">Hair Cutting Styele</option>
+                                <option value="Hair Washing">Hair Washing</option>
+                                <option value="Body Treatments">Body Treatments</option>
+                                <option value="Beauty & Spa">Beauty & Spa</option>
+                                <option value="Stylist Shaving">Stylist Shaving</option>
+                                <option value="Multi Hair Colors">Multi Hair Colors</option>
 
                             </select>
                         </div>
@@ -380,14 +386,17 @@
 
                         <div class="bf-col-12">
                             <p>Messages</p>
-                            <textarea name="Messages" id="Messages" cols="10" rows="3"></textarea>
+                            <textarea name="messages" id="Messages" cols="10" rows="3"></textarea>
                         </div>
 
                     </div>
 
                     <div class="bf-row">
                         <div class="bf-col-3">
-                            <input type="submit" value="Submit">
+                            <button
+                                style="background-color: var(--maincolor2); padding: 10px; width: 100%; color: white; font-size: 16px; border: none;outline: none; border-radius:10px;"
+                                type="submit" name="save_select">SUBMIT</button>
+
                         </div>
 
                     </div>
@@ -395,14 +404,12 @@
                 </form>
 
             </div>
-
-
         </div>
 
     </section>
 
     <!-- Footer Section start--------------------------------------------->
-    <footer>
+    <footer id="contact">
         <div class="content">
             <div class="top">
                 <div class="logo-details">
@@ -435,17 +442,21 @@
                 </ul>
                 <ul class="box">
                     <li class="link_name">Opening Day </li>
+
                     <li><a href="#">Sunday</a></li>
                     <li><a href="#">Monday</a></li>
                     <li><a href="#">Tuesday</a></li>
                     <li><a href="#">Wednesday</a></li>
                     <li><a href="#">Thrusday</a></li>
                     <li><a href="#">Friday</a></li>
+
                 </ul>
                 <ul class="box">
                     <li class="link_name">Contact Info </li>
                     <li><a href="#">Mobile No: 01623347438 </a></li>
                     <li><a href="#">Mail: Esalon@gmail.com </a></li>
+                    <li><a style="color: var(--maincolor); font-weight: 700;" href="#">Open Time: 9.00 AM</a></li>
+                    <li><a style="color: var(--maincolor); font-weight: 700;" href="#">Close Time: 11.00 PM</a></li>
                 </ul>
 
                 <ul class="box input-box">
@@ -465,8 +476,52 @@
             </div>
         </div>
     </footer>
+
+
+
+    <!--<script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>-->
     <script src="script.js"></script>
 
 </body>
 
 </html>
+
+<?php
+
+include("connection.php");
+
+if(isset($_POST['save_select'])){
+        $Fast_Name = $_POST['fname'];
+        $Last_Name = $_POST['lname'];
+        $Email_Address = $_POST['email'];
+        $Mobile_Number = $_POST['number'];
+        $Date = $_POST['date'];
+        $Services = $_POST['select'];
+        $Messages = $_POST['messages'];
+
+        $sql = "INSERT INTO bookingform(Fast_Name, Last_Name, Email_Address, Mobile_Number, Date, Services, Messages)VALUES('$Fast_Name',' $Last_Name',' $Email_Address','$Mobile_Number','$Date','$Services','$Messages')";
+        $sql_run = mysqli_query($con,$sql);
+
+        if($sql_run){
+            ?>
+           <script>
+
+            swal({
+                title: "Thank You!",
+                text: "OUR DETAILS SUCCESSFULLY SUBMITED!",
+                icon: "success",
+            });
+            header("Location:index.php");
+           </script>
+           
+        <?php
+            
+       
+    }
+}
+?>

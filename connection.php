@@ -6,8 +6,8 @@
 
     $con = mysqli_connect($servername,$username,$password,$dbname);
 
-    if($con){
-        echo "Sucessfully connected";
-    }
+    /*if($con){
+       // echo "Sucessfully connected";
+    }*/
 
 ?>
