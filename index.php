@@ -461,8 +461,11 @@
 
                 <ul class="box input-box">
                     <li class="link_name">Subscribe</li>
-                    <li><input type="text" placeholder="Enter your email"></li>
-                    <li><input type="button" value="Subscribe"></li>
+                    <form method="post">
+                        <li><input type="text" name="subscribe" placeholder="Enter your email"></li>
+                        <input type="submit"value="Subscribe">
+                    </form>
+                    
                 </ul>
             </div>
         </div>
@@ -479,12 +482,6 @@
 
 
 
-    <!--<script>
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-    </script>-->
     <script src="script.js"></script>
 
 </body>
@@ -496,6 +493,7 @@
 include("connection.php");
 
 if(isset($_POST['save_select'])){
+
         $Fast_Name = $_POST['fname'];
         $Last_Name = $_POST['lname'];
         $Email_Address = $_POST['email'];
@@ -504,24 +502,51 @@ if(isset($_POST['save_select'])){
         $Services = $_POST['select'];
         $Messages = $_POST['messages'];
 
-        $sql = "INSERT INTO bookingform(Fast_Name, Last_Name, Email_Address, Mobile_Number, Date, Services, Messages)VALUES('$Fast_Name',' $Last_Name',' $Email_Address','$Mobile_Number','$Date','$Services','$Messages')";
+        $sql = "INSERT INTO bookingform (Fast_Name, Last_Name, Email_Address, Mobile_Number, Date, Services, Messages)VALUES('$Fast_Name',' $Last_Name',' $Email_Address','$Mobile_Number','$Date','$Services','$Messages')";
         $sql_run = mysqli_query($con,$sql);
 
         if($sql_run){
             ?>
-           <script>
+    <script>
+        swal({
+            title:"Thank You!",
+            text: "OUR DETAILS SUCCESSFULLY SUBMITED!",
+            icon: "success",
+        });
 
-            swal({
-                title: "Thank You!",
-                text: "OUR DETAILS SUCCESSFULLY SUBMITED!",
-                icon: "success",
-            });
-            header("Location:index.php");
-           </script>
-           
+    </script>
+
         <?php
-            
-       
+
     }
 }
+
 ?>
+
+
+<?php
+    include("connection.php");
+    
+    if(isset($_POST['subscribe'])){
+        $Email = $_POST['subscribe'];
+
+        $emailsql = "INSERT INTO subscribe(Subscribe_Email)VALUES('$Email')";
+
+        $emailrun = mysqli_query($con,$emailsql);
+
+        if($emailrun){
+            ?>
+            <script> 
+
+            swal("Are you sure you want to do this?", {
+            buttons: ["Oh noez!", "OK!"],
+            });  
+
+            </script>
+            <?php
+            
+        }
+    }
+    
+?>
+

@@ -113,6 +113,10 @@ div.home {
   background-repeat: no-repeat;
 }
 
+.content {
+  margin-top: 100px;
+}
+
 .wel {
   color: var(--maincolor);
   position: absolute;
@@ -138,6 +142,7 @@ div.home {
   margin-left: 200px;
   font-weight: bold;
   word-spacing: 0.5rem;
+
 }
 
 .navbar_btn_appoinment {
@@ -395,7 +400,7 @@ div.home {
   width: 100%;
   filter: grayscale(100);
   transition: transform 0.5s;
-  font-size: ;
+
 }
 
 .gallery_image::-webkit-scrollbar {
