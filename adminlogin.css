@@ -1,0 +1,120 @@
+:root {
+    --maincolor: rgb(223, 103, 17);
+    --maincolor2: rgb(51, 16, 97);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--maincolor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_title {
+    margin-top: 50px;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+
+}
+
+div.login {
+    width: 500px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+div.login h2 {
+    text-align: center;
+    background-color: var(--maincolor);
+    padding: 12px 0px;
+    color: white;
+
+}
+
+div.login form {
+    padding: 30px 60px;
+}
+
+div.login form div.input-field {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+    margin-left: -10px;
+}
+
+div.login form div.input-field i {
+    color: var(--maincolor2);
+    padding: 10px 14px;
+    background-color: #f2f4f6;
+
+}
+
+div.login form div.input-field input {
+    background-color: #d2d2d2;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+
+}
+
+div.login form button {
+    width: 100%;
+    background-color: var(--maincolor);
+    border-radius: 2px;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 15px 0;
+    transition: background-color 0.4s;
+
+}
+
+div.login form button:hover {
+    background-color: var(--maincolor2);
+}
+
+div.login form div.extra {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.login form div.extra a:first-child {
+    color: darkgrey;
+}
+
+div.login form div.extra a:last-child {
+    color: var(--maincolor2);
+}
+
+.login_form {}
+
+.login_form_img img {
+    height: 320px;
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+:root {
+    --maincolor: rgb(223, 103, 17);
+    --maincolor2: rgb(51, 16, 97);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+div.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 60px;
+    background-color: var(--maincolor2);
+    text-align: center;
+    align-items: center;
+    height: 100px;
+
+}
+
+div.header h1 {
+    color: white;
+}
+
+div.header button {
+    background-color: var(--maincolor);
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: large;
+}

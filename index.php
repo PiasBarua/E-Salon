@@ -37,7 +37,7 @@
 
             </div>
             <div class="login">
-                <button><a href="">Log In</a></button>
+                <button><a href="adminLogin.html">Log In</a></button>
             </div>
         </nav>
         <div class="home">
@@ -463,9 +463,9 @@
                     <li class="link_name">Subscribe</li>
                     <form method="post">
                         <li><input type="text" name="subscribe" placeholder="Enter your email"></li>
-                        <input type="submit"value="Subscribe">
+                        <input type="submit" value="Subscribe">
                     </form>
-                    
+
                 </ul>
             </div>
         </div>
@@ -507,16 +507,16 @@ if(isset($_POST['save_select'])){
 
         if($sql_run){
             ?>
-    <script>
-        swal({
-            title:"Thank You!",
-            text: "OUR DETAILS SUCCESSFULLY SUBMITED!",
-            icon: "success",
-        });
+<script>
+    swal({
+        title: "Thank You!",
+        text: "OUR DETAILS SUCCESSFULLY SUBMITED!",
+        icon: "success",
+    });
 
-    </script>
+</script>
 
-        <?php
+<?php
 
     }
 }
@@ -536,17 +536,16 @@ if(isset($_POST['save_select'])){
 
         if($emailrun){
             ?>
-            <script> 
+<script>
 
-            swal("Are you sure you want to do this?", {
-            buttons: ["Oh noez!", "OK!"],
-            });  
+    swal("Are you sure you want to do this?", {
+        buttons: ["Oh noez!", "OK!"],
+    });
 
-            </script>
-            <?php
+</script>
+<?php
             
         }
     }
     
 ?>
-
