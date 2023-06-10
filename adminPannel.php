@@ -18,6 +18,7 @@
     /*if(!isset($_SESSION['AdminLoginId'])){
         header("location:adminLogin.php");
     }*/
+    
     $query = "SELECT * FROM `bookingform`";
     $result = mysqli_query($con,$query);
 
