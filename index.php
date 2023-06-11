@@ -1,4 +1,5 @@
 <?php include("connection.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +38,7 @@
 
             </div>
             <div class="login">
-                <button><a href="adminLogin.html">Log In</a></button>
+                <button><a href="adminLogin.php">Log In</a></button>
             </div>
         </nav>
         <div class="home">

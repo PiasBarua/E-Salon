@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
     <title>Admin Login</title>
 
 </head>
@@ -61,7 +62,7 @@
 
         session_start();
         $_SESSION['AdminLoginId'] = $_POST['Admin_Name'];
-        header("location:adminPannel.html");
+        header("location:adminPannel.php");
     }else{
         echo '<script> 
         alert("Incorrect Password");

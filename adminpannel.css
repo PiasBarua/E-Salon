@@ -33,7 +33,7 @@ div.header h1 {
     color: white;
 }
 
-div.header button {
+.header button {
     background-color: var(--maincolor);
     padding: 10px;
     border-radius: 5px;
@@ -42,4 +42,11 @@ div.header button {
     outline: none;
     color: white;
     font-size: large;
+    transition: ease-in-out;
+
+}
+
+.header button:hover {
+    scale: 1.1;
+    background-color: red;
 }
