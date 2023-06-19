@@ -10,13 +10,6 @@ if (isset($_POST['delete'])) {
     mysqli_query($con, $deleteQuery);
 }
 
-$query = "SELECT * FROM `bookingform` `subscribe`";
-$result = mysqli_query($con, $query);
-
-///if(!isset($_SESSION['AdminLoginId'])){
-        //header("location:adminLogin.php");
-    //}
-
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +51,9 @@ $result = mysqli_query($con, $query);
             <td class=" bg-dark text-white border-end">Action</td>
         </tr>
         <?php
-        while ($row = mysqli_fetch_assoc($result)) {
+        $query = "SELECT * FROM `bookingform` `subscribe`";
+        $result = mysqli_query($con, $query);
+        while ($row = mysqli_fetch_array($result)) {
             ?>
             <tr>
                 <td><?php echo $row['SL']; ?></td>
